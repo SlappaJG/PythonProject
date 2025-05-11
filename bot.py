@@ -18,6 +18,8 @@ class MyClient(discord.Client):
             await message.channel.send('Hello World!')
         if message.content.startswith('$meme'):
             await message.channel.send(get_meme())
+        if message.content.startswith('$test'):
+            await message.channel.send('Working Massa!')
 
 intents = discord.Intents.default()
 intents.message_content = True
